@@ -198,7 +198,7 @@ export default function Home() {
                         <Award size={24} className="text-accent-foreground" />
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Prof. Dr. John Doe</h3>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Prof. Dr. Pudji Widodo, M.Si.</h3>
                     <p className="text-foreground/70 mb-4">Dosen Fakultas Ilmu Komputer</p>
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
                       <Calendar size={16} />
