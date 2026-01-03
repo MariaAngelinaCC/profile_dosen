@@ -1,18 +1,7 @@
-import mysql from "mysql2/promise"
+import { Pool } from "pg";
 
-const pool = mysql.createPool({
-  host: process.env.MYSQL_HOST,
-  port: Number(process.env.MYSQL_PORT || 3306),
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
-  waitForConnections: true,
-  connectionLimit: 10,
-})
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
 
-export async function query(sql: string, values: any[] = []) {
-  const [rows] = await pool.execute(sql, values)
-  return rows
-}
-
-export default pool
+export default pool;
